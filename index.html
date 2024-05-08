@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>View Passengers</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<div id="sidebar" class="sidebar">
+    <button onclick="loadData('all')">View All Passengers</button>
+    <button onclick="loadData('AirMAC')">View AirMAC Passengers</button>
+    <button onclick="loadData('AirMSC')">View AirMSC Passengers</button>
+    <button onclick="loadData('allRoutes')">View All Routes</button>
+</div>
+
+<div id="main">
+    <div id="addPassengerForm">
+        <h3>Add New Passenger</h3>
+        <form id="newPassenger" method="POST">
+    <label for="database">Choose Database:</label>
+    <select name="database">
+        <option value="airline1db">Airline 1 DB</option>
+        <option value="airline2db">Airline 2 DB</option>
+    </select>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+    <label for="totalcost">Total Cost:</label>
+    <input type="number" id="totalcost" name="totalcost" required>
+    <button type="submit">Add Passenger</button>
+</form>
+
+    </div>
+    <div id="dataDisplay">
+        <!-- Passenger data will be displayed here -->
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

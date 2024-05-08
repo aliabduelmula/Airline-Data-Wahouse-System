@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #007bff;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.5s;
+}
+
+.sidebar button {
+    color: white;
+    padding: 15px 20px;
+    margin: 8px 0;
+    text-align: left;
+    display: block;
+    width: calc(100% - 40px);
+    border: none;
+    background-color: #007bff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+.sidebar button:hover {
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+    margin-left: 260px; /* Slightly increased to adjust form visibility */
+}
+
+#addPassengerForm {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#addPassengerForm h3 {
+    color: #333;
+}
+
+#addPassengerForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+#addPassengerForm label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#addPassengerForm input, #addPassengerForm select {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#addPassengerForm button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addPassengerForm button:hover {
+    background-color: #0056b3;
+}
+
+#dataDisplay table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+}
+
+#dataDisplay th, #dataDisplay td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#dataDisplay th {
+    background-color: #004494;
+    color: white;
+}
+
+#dataDisplay tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#dataDisplay tr:hover {
+    background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100px;
+    }
+
+    #main {
+        margin-left: 110px;
+    }
+
+    #addPassengerForm {
+        margin: 10px;
+    }
+}
+
+#addPassengerForm input:focus, #addPassengerForm select:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+}
