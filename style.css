@@ -42,7 +42,7 @@ body {
 #main {
     transition: margin-left .5s;
     padding: 20px;
-    margin-left: 260px; /* Slightly increased to adjust form visibility */
+    margin-left: 260px; 
 }
 
 #addPassengerForm {
